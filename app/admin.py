@@ -11,7 +11,7 @@ from .models import (
 
 
 @admin.register(Student)
-class CustomerModelAdmin(admin.ModelAdmin):
+class StudentModelAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'locality', 'city', 'zipcode', 'state']
 
 
