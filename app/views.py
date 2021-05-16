@@ -6,9 +6,9 @@ from .forms import StudentRegistrationForm
 class homeView(View):
     def get(self,request):
         webDevlopment = Course.objects.filter(category='WB')
-        cloudLearn = Course.objects.filter(category ='CL')
+        learnCloud = Course.objects.filter(category ='CL')
 
-        return render(request, 'app/home.html', {'WebDevlopment':webDevlopment,'cloudLearn':cloudLearn})
+        return render(request, 'app/home.html', {'WebDevlopment':webDevlopment,'learnCloud':learnCloud})
 
 
 def login(request):
@@ -26,18 +26,24 @@ class StudentRegistrationView(View):
             form.save()
         return render(request, 'app/studentregistration.html', {'form': form})
 
-# def webDevlopment(request):
+def change_password(request):
+    return render(request, 'app/changepassword.html')
+
+def webdevlopment(request):
  
-#     webDevlopment=Course.objects.filter(category='WB')
+    webDevlopment=Course.objects.filter(category='WB')
     
-#     return render(request, 'app/webDevlopment.html', {webDevlopment:webDevlopment})
+    return render(request, 'app/webDevlopment.html', {webDevlopment:webDevlopment})
 
 
-# def cloudLearn(request):
+def learncloud(request):
 
-#     cloudLearn = Course.objects.filter(category='CL')
+    learnCloud = Course.objects.filter(category='CL')
 
-#     return render(request, 'app/cloudLearn.html', {cloudLearn: cloudLearn})
+    return render(request, 'app/Learncloud.html', {learnCloud: learnCloud})
+
+def HTML(request):
+    return render(request,'app/html.html')
 
 
 # def add_to_cart(request):
@@ -60,8 +66,7 @@ class StudentRegistrationView(View):
 #     return render(request, 'app/orders.html')
 
 
-# def change_password(request):
-#     return render(request, 'app/changepassword.html')
+
 
 
 
