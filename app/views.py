@@ -46,6 +46,22 @@ def HTML(request):
     return render(request,'app/html.html')
 
 
+def CSS(request):
+    return render(request, 'app/css.html')
+
+def Bootstrap(request):
+    return render(request,'app/bootstrap.html')
+
+
+def Javascript(request):
+    return render(request, 'app/javascript.html')
+
+def Reactjs(request):
+    return render(request,'app/reactjs.html')
+
+
+
+
 # def add_to_cart(request):
 #     return render(request, 'app/addtocart.html')
 
