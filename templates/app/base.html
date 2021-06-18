@@ -26,7 +26,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand text-white bg-dark" href="/">EduTech</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,7 +55,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="Webdevlopment">
                             <li><a class="dropdown-item" href="#">Django</a></li>
-                            <li><a class="dropdown-item" href="#">HTML</a></li>
+                            <li><a class="dropdown-item" href="{% url 'html'%}">HTML</a></li>
                             <li><a class="dropdown-item" href="#">CSS</a></li>
                             <li><a class="dropdown-item" href="#">Bootstrap</a></li>
                             <li><a class="dropdown-item" href="#">Java Script</a></li>
@@ -85,14 +85,14 @@
                             </ul>
                         </li>
                         <li class="nav-item mx-2">
-                            <a href="#"" class="nav-link text-white"><span
+                            <a href="#" class="nav-link text-white"><span
                                     class="badge bg-danger">4</span> Cart </a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a href="#" class="nav-link text-white">Login</a>
+                            <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a href="#" class="nav-link text-white">Registration</a>
+                            <a href="{% url 'registration' %}" class="nav-link text-white">Registration</a>
                         </li>
                     </ul>
                 </div>
